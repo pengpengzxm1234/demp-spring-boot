@@ -48,7 +48,7 @@ public class DemoApplication {
     }
 
     @Bean
-    public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter(){
+    public MappingJacksonHttpMessageConverterEx mappingJackson2HttpMessageConverter(){
         return new MappingJacksonHttpMessageConverterEx();
     }
 

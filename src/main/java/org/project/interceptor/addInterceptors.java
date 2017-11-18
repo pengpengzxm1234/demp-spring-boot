@@ -17,6 +17,9 @@ public class addInterceptors extends WebMvcConfigurerAdapter {
         registry.addInterceptor(new MyInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/type")
-                .excludePathPatterns("/error");
+                .excludePathPatterns("/error")
+                .excludePathPatterns("/v2/*")
+                .excludePathPatterns("/configuration/*")
+                .excludePathPatterns("/swagger*");
     }
 }
