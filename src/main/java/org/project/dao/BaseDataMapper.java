@@ -14,10 +14,6 @@ import java.util.List;
  */
 public interface BaseDataMapper {
 
-    @Select("select id, name from tb_base where pid = 'area'")
-    @Results({
-            @Result(property = "id", column = "id"),
-            @Result(property = "name", column = "name")
-    })
+
     List<BaseData> queryCity();
 }
