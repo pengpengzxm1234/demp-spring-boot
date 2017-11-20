@@ -1,4 +1,6 @@
-package org.project;
+package org.project.domain.dto;
+
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
@@ -8,9 +10,13 @@ import java.util.Date;
  * @desc
  */
 public class User {
+    @ApiModelProperty(name = "姓名")
     private String name;
+    @ApiModelProperty(name = "性别")
     private String sex;
+    @ApiModelProperty(name = "年龄")
     private int age;
+    @ApiModelProperty(name = "时间 yyyy-MM-dd HH:mm:ss")
     private Date date;
 
     public User(String name, String sex, int age) {

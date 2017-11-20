@@ -1,7 +1,7 @@
 package org.project.service;
 
 import com.github.pagehelper.PageInfo;
-import org.project.domain.BaseData;
+import org.project.domain.bean.BaseData;
 
 
 /**

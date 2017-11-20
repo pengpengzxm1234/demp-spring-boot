@@ -1,18 +1,14 @@
 package org.project.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import net.sf.json.JSONObject;
-import org.project.Response;
-import org.project.User;
+import org.project.domain.resp.Response;
+import org.project.domain.dto.User;
 import org.project.service.BaseDataService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
 
 /**
  * @author pengpeng
@@ -24,6 +20,7 @@ import java.util.Map;
 @RequestMapping(value = BaseController.url)
 public class BaseController {
     public static final String url = "/base";
+    private static final Logger log = LoggerFactory.getLogger(BaseController.class);
 
     @Autowired
     private BaseDataService baseDataService;
@@ -33,6 +30,7 @@ public class BaseController {
     Response queryCity(@PathVariable("pageNum") int pageNum){
         Response response = new Response();
         response.setData(baseDataService.queryCity(pageNum));
+        log.info("{}", pageNum);
         return response;
     }
 

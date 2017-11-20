@@ -1,4 +1,4 @@
-package org.project.filter;
+package org.project.config.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;

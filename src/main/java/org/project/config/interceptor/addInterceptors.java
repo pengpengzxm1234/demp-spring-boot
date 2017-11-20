@@ -1,4 +1,4 @@
-package org.project.interceptor;
+package org.project.config.interceptor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
